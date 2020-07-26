@@ -27,7 +27,7 @@
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter android:autoVerify="true">
-                <!-- FB dynamic links begin here -->
+                <!-- FB dynamic links config begin here -->
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
