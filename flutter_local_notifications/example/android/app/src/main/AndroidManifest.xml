@@ -26,9 +26,18 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale"
             android:hardwareAccelerated="true"
             android:windowSoftInputMode="adjustResize">
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
+                <!-- FB dynamic links begin here -->
                 <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                    <data
+                    android:host="example.com"
+                    android:scheme="https"/>
+                <data android:host="example.com/link" android:scheme="http"/>
+                <data android:host="example.com/link" android:scheme="https"/>
+                <!-- end -->
             </intent-filter>
         </activity>
         <receiver android:name="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" />
